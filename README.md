@@ -3,7 +3,7 @@ Fetch informations from [Open Tree of Life](https://tree.opentreeoflife.org/abou
 
 Usage: `otlsearch "taxon name"`, inside quotes for composed names (i.e. "Canis lupus").
 
-If you want to save the output just use terminal resources like : `otlsearch "Canis lupus > Canis_lupus.txt"`. This will save a text file with the search results to the current directory.
+If you want to save the output just use terminal resources like : `otlsearch "Canis lupus" > Canis_lupus.txt`. This will save a text file with the search results to the current directory.
 
 Bellow an output example:
 

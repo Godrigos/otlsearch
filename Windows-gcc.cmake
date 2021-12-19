@@ -5,15 +5,15 @@ cmake_minimum_required(VERSION 3.15)
 project(otlsearch VERSION 1.0 LANGUAGES CXX)
 
 # the name of the target operating system
-set(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_SYSTEM_NAME Windows)
 
 # specify the C++ compiler and standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # which compilers to use for C and C++
-set(CMAKE_C_COMPILER "/usr/bin/gcc")
-set(CMAKE_CXX_COMPILER "/usr/bin/g++")
+set(CMAKE_C_COMPILER   x86_64-linux-gnu-gcc)
+set(CMAKE_CXX_COMPILER x86_64-linux-gnu-g++)
 set(CMAKE_BUILD_TYPE Release)
 
 # set source files list

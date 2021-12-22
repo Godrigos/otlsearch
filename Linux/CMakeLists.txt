@@ -17,7 +17,7 @@ set(CMAKE_CXX_COMPILER "/usr/bin/g++")
 set(CMAKE_BUILD_TYPE Release)
 
 # set source files list
-set(source_files src/main.cpp src/search.cpp src/links.cpp)
+set(source_files ../src/main.cpp ../src/search.cpp ../src/links.cpp)
 
 # Conan settingns
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
@@ -28,5 +28,5 @@ add_executable(${CMAKE_PROJECT_NAME} "${source_files}")
 target_link_libraries(${CMAKE_PROJECT_NAME} ${CONAN_LIBS})
 
 target_include_directories(${CMAKE_PROJECT_NAME}
-    PUBLIC "${CMAKE_CURRENT_LIST_DIR}/inc"                          
+    PUBLIC "../inc"                          
 )

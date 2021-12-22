@@ -34,4 +34,5 @@
 
 # Folders
 .vscode/
-build/
+Linux/build/
+Windows/build/

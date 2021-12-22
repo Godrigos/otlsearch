@@ -11,13 +11,13 @@ fi
 
 cd build
 conan install .. --build=missing
-cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
+cmake .. -DCMAKE_BUILD_TYPE=Release
 cmake --build . --clean-first
 
 echo "Linux compilation ended."
 echo
 
-echo "Windows cross compilation"
+echo "Windows cross compilation."
 cd ../../Windows
 
 if [ -d "build"]; then

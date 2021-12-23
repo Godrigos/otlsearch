@@ -3,7 +3,7 @@
 echo "Linux compilation." 
 cd Linux
 
-if [ -d "build"]; then
+if [ -d "build" ]; then
   echo "build directory already exists."
 else
   mkdir build

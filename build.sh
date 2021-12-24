@@ -27,7 +27,8 @@ else
 fi
 
 cd build
-conan install .. --build=missing -pr:h windows -pr:b default -o libcurl:with_unix_sockets=False
+conan install .. --build=missing -pr:h windows -pr:b default \
+  -o libcurl:with_unix_sockets=False
 cmake .. -DCMAKE_BUILD_TYPE=Release
 cmake --build . --clean-first
 

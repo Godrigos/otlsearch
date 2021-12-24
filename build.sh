@@ -20,14 +20,14 @@ echo
 echo "Windows cross compilation."
 cd ../../Windows
 
-if [ -d "build"]; then
+if [ -d "build" ]; then
   echo "build directory already exists."
 else
   mkdir build
 fi
 
 cd build
-conan install .. --build=missing -pr:h windows -pr:b default
+conan install .. --build=missing -pr:h windows -pr:b default -o libcurl:with_unix_sockets=False
 cmake .. -DCMAKE_BUILD_TYPE=Release
 cmake --build . --clean-first
 

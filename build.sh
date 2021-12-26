@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Attention to conan profiles when compiling or cross compiling
+
 echo "Linux compilation." 
 cd Linux
 
@@ -10,7 +12,7 @@ else
 fi
 
 cd build
-conan install .. --build=missing
+conan install .. --build=missing --profile ../linux
 cmake .. -DCMAKE_BUILD_TYPE=Release
 cmake --build . --clean-first
 
@@ -27,7 +29,7 @@ else
 fi
 
 cd build
-conan install .. --build=missing -pr:h windows -pr:b default \
+conan install .. --build=missing -pr:h ../windows -pr:b ../../Linux/linux \
   -o libcurl:with_unix_sockets=False
 cmake .. -DCMAKE_BUILD_TYPE=Release
 cmake --build . --clean-first
@@ -35,5 +37,3 @@ cmake --build . --clean-first
 cd ../..
 
 echo "Windows cross compilation ended."
-
-# Attention to conan profiles when compiling or cross compiling
